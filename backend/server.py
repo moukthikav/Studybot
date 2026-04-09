@@ -9,12 +9,13 @@ import uuid
 
 app = FastAPI(title="StudyBot API")
 
+# Updated origins to match your live site
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-    "http://localhost:5173",
-    "https://studybot-xyz.vercel.app",
-],
+        "http://localhost:5173",
+        "https://studybot-two.vercel.app", 
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
